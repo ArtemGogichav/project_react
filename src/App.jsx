@@ -6,7 +6,7 @@ import To_do from './components/To-do/To_do';
 function App() {
   return (
     <div>
-      <Input></Input>
+      <Input arr={mass}></Input>
       <To_do arr={mass}></To_do>
     </div>
 
