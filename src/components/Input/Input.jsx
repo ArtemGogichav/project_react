@@ -1,12 +1,13 @@
-import { useState } from "react"
 
-function Input({arr}){
-    const [state, setState] = useState()
+function Input({setState, state, setToDoState}){
+
     
     return( 
     <>
-    <input onChange={(e)=>{setState(e.target.value)}} type="text" id="input"></input>
-    <button onClick={()=>{addEvent}}>add</button>
+    <input onChange={(e)=>{setState(e.target.value)}} type="text" id="input"  value={state}></input>
+    <button onClick={()=>{setToDoState(prev => [...prev, state])
+        setState('')
+    }}>add</button>
     </>)
 }
 export default Input
